@@ -3,8 +3,6 @@ body
     margin: 0;
     box-sizing: border-box;
     font-family: serif
-    
-    
 }
 header
 {
@@ -25,9 +23,9 @@ header a:hover{
 }
 .container
 {
-    display: grid;
-    grid-template-columns: 1fr 1fr 2fr 1fr;
-    grid-template-rows: auto;
+    display: flex !important;
+    justify-content: center;      /* center horizontally */
+    align-items: center;  
     background:linear-gradient(rgb(88, 110, 169),navy);
     height: 60vh;
 }
@@ -37,15 +35,20 @@ header a:hover{
     margin-block:auto ;
     
 }
-.mypic img{
-    width: 100%;
-    
+.mypic img {
+  width: auto;           /* remove the 100% stretch */
+  max-width: 200px;      /* or whatever size you prefer */
+  height: auto;          /* maintain aspect ratio */
+  display: block;        /* remove any inline spacing */
+  margin: 0 auto;        /* center horizontally if needed */
 }
 .aboutme
 {
     font-size: 2rem;
     color: white;
     border-top: solid 5px white;
+    max-width: 500px;
+    text-align: center;
 }
 footer
 {
@@ -59,8 +62,11 @@ footer
     
 }
 .me img{
-    width: 60%;
-    
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
 }
 footer
 {
@@ -140,7 +146,15 @@ footer
 .documents:hover .subfolders {
     display: block; 
 }
-.folder a {
+.folder  a {
+        font-size: large;
+        color: navy;
+        text-decoration: none;
+        padding: 5px 0;
+        display: block;
+    }
+
+.semester-box a {
     font-size: large;
     color: navy;
     text-decoration: none;
@@ -172,4 +186,47 @@ footer
 }
 .project::after{
     content: "Contain a approved project plan made by me and my group IT-1D";
+}
+.semesters-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    gap: 40px;
+}
+
+.semester-box {
+    background: #f5f5f5;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    width: 220px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s cubic-bezier(.25,.8,.25,1);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.semester-desc {
+    opacity: 0;
+    max-height: 0;
+    transition: opacity 0.4s, max-height 0.4s;
+    margin-top: 16px;
+    text-align: center;
+    padding: 0 10px;
+}
+
+.semester-box:hover {
+    width: 320px;
+    height: 260px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+}
+
+.semester-box:hover .semester-desc {
+    opacity: 1;
+    max-height: 100px;
 }
