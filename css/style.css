@@ -170,22 +170,22 @@ footer
 
 
 .Edumundo::after {
-    content: "Edumundo assignments which I did during 2 periods";
+    content: "Edumundo assignments which I did during the semester";
 }
 .Feedbacks::after{
-    content: "Feedbacks which I recieved from my friends during period 1 and 2";
+    content: "Feedbacks which I recieved from my friends during The semester";
 }
-.Commiunications::after{
-    content: " an Interview schedule made by me for our client meeting";
-}
+/* .Commiunications::after{
+    content: " ";
+} */
 .Meeting::after{
-    content: "contains one minutes of meeting and one agenda ";
+    content: "contains one minutes of meeting and one agenda and evaluation from my group members";
 }
 .Reflection::after{
-    content: "My reflection report about first semester in iceberg method";
+    content: "My reflection report about past semester in iceberg method";
 }
 .project::after{
-    content: "Contain a approved project plan made by me and my group IT-1D";
+    content: "Contain a approved project plan made by me and my group";
 }
 .semesters-container {
     display: flex;
