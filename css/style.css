@@ -25,7 +25,7 @@ header a:hover{
 {
     display: flex !important;
     justify-content: center;      /* center horizontally */
-    align-items: center;  
+    align-items: center;
     background:linear-gradient(rgb(88, 110, 169),navy);
     height: 60vh;
 }
@@ -33,7 +33,7 @@ header a:hover{
 {
     grid-column: 2/3;
     margin-block:auto ;
-    
+
 }
 .mypic img {
   width: auto;           /* remove the 100% stretch */
@@ -59,7 +59,7 @@ footer
     grid-column: 1/3;
     margin-block:auto ;
     margin-left: 20%;
-    
+
 }
 .me img{
     width: 180px;
@@ -110,14 +110,14 @@ footer
     height: auto;
     background-color: #f0eff4;
 }
-.documents a 
+.documents a
 {
     color:navy;
     text-decoration: none;
     font-size: xx-large;
 }
 .documents::after {
-    
+
     position: absolute;
     top: 0;
     left: 0;
@@ -129,12 +129,12 @@ footer
     padding: 0.5rem;
     opacity: 0;
     cursor: pointer;
-    
-    
+
+
 }
 .documents:hover::after {
     opacity: 1;
-    
+
 }
 .subfolders {
     display: none;
@@ -144,7 +144,7 @@ footer
 }
 
 .documents:hover .subfolders {
-    display: block; 
+    display: block;
 }
 .folder  a {
         font-size: large;
@@ -163,8 +163,8 @@ footer
 }
 
 .folder a:hover {
-    color: #d32f2f; 
-    
+    color: #d32f2f;
+
 }
 
 
